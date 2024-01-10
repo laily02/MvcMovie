@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</--div-->
+
+<!--body style="background-color: lightblue;">
+    <div class="text-center">
+        <h1>Welcome to My Movie App</h1>
+        <p>Discover and explore a world of movies!</p>
+    </div>
+</body-->
+
+<style>
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .carousel-image {
+        display: none;
+        max-width: 100%; /* Ensure images don't exceed the container width */
+        align-items: center;
+    }
+
+     .carousel-image:first-child {
+            display: block; /* Show the first image initially */
+     }
+
+</style>
+
+<body style="background-color: black">
+
+    <div style="text-align: center; color: white;">
+        <h1>Welcome to My Movie App</h1>
+        <div id="imageCarousel" class="center">
+            <img src="/images/whenharrymetsally.png" alt="Image 1" class="carousel-image"
+                 onclick="window.location.href='https://youtu.be/-E10AcydCuk?si=aahdQNFUjI3G-apu'">
+            <img src="/images/ghostbusters.jpg" alt="Image 2" class="carousel-image"
+                 onclick="window.location.href='https://youtu.be/6hDkhw5Wkas?si=O4HkYJmjP54NDA3c'">
+            <img src="/images/ghostbusters2.jpg" alt="Image 3" class="carousel-image"
+                 onclick="window.location.href='https://youtu.be/weIqC-oUGmA?si=beprlpwCG7FHd-8F'">
+            <img src="/images/riobravo.jpg" alt="Image 4" class="carousel-image"
+                 onclick="window.location.href='https://youtu.be/WPO12ZzGS84?si=4qKSfVpKJIJB65UM'">
+        </div>
+        <p>Discover and explore a world of movies!</p>
+    </div>
+
+    <!--div style="text-align: center; color: white; width="300px; height="150px">
+        <h1>Welcome to My Movie App</h1>
+        <div>
+            <img src="/images/whenharrymetsally.png" alt="Image 1" class="carousel-image" 
+            onclick="window.location.href='https://youtu.be/-E10AcydCuk?si=aahdQNFUjI3G-apu'">
+            <img src="/images/ghostbusters.jpg" alt="Image 2" class="carousel-image" 
+            onclick="window.location.href='https://youtu.be/6hDkhw5Wkas?si=O4HkYJmjP54NDA3c'">
+            <img src="/images/ghostbusters2.jpg" alt="Image 3" class="carousel-image" 
+            onclick="window.location.href='https://youtu.be/weIqC-oUGmA?si=beprlpwCG7FHd-8F'">
+            <img src="/images/riobravo.jpg" alt="Image 4" class="carousel-image" 
+            onclick="window.location.href='https://youtu.be/WPO12ZzGS84?si=4qKSfVpKJIJB65UM'">
+        </div>
+        <p>Discover and explore a world of movies!</p>
+    <div-->
+
+    <script>
+        // JavaScript code for image carousel
+        var currentImageIndex = 0;
+        var images = document.querySelectorAll('.carousel-image');
+
+        function changeImage() {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.display = 'block';
+        }
+
+        setInterval(changeImage, 3000); // Change image every 3 seconds
+    </script>
+</body>
